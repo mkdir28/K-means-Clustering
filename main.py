@@ -26,21 +26,30 @@ def assign_centroid_to_nearest_cluster(k, dataset):
 
 
 #select randomly k distinct data point
-def select_random_k_centroid(k, dataset):
-    random = [random]
-    centroid = []
+# def select_random_k_centroid(k, dataset):
+#     random = [random]
+#     centroid = []
 
 #the purity of each cluster
-def purity(label, k);
+def purity(label, k):
+
 
 #calculate the mean of each cluster m- measure
-def stop_point(previous_centroid, centroid, iteration):
+# def stop_point(previous_centroid, centroid, iteration):
+#     if iteration > MAX_ITERATIONS: return True
+#     return previous_centroid == centroid
 
 
 def k_means(k, dataset):
+    clusters = [[] for _ in range(k)]
+
 
 def main():
-    k = input("Write a key number of clusters: ")
+    with open('iris_kmeans.txt', 'r') as file:
+        file_data = [read.split(", ") for read in file]
+        dataset = [[float[point] for point in observation[:-1]] for observation in file_data]
+    k = int(input("Write a key number of clusters: "))
 
+    k_means(k, dataset)
 
 main()
